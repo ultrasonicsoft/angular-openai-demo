@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OpenAiService } from './open-ai.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-openai-demo';
+
+  description = '';
+
+  constructor(private openAiService: OpenAiService) { }
+
+  getSuggestion(): void {
+    this.openAiService.getSuggestion(this.description);
+  }
+
 }
