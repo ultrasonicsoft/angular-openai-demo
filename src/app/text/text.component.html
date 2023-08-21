@@ -1,0 +1,11 @@
+<!-- app.component.html -->
+<div>
+    <h1>Text Completion Website</h1>
+    <textarea [(ngModel)]="prompt" placeholder="Enter your text here"></textarea>
+    <button (click)="ccompleteText()">Complete</button>
+    <div *ngIf="completedText">
+      <h2>Completed Text:</h2>
+      <p>{{ completedText }}</p>
+    </div>
+  </div>
+  
